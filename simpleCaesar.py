@@ -23,6 +23,8 @@ for i in range(stringLength):
     c = string[i]
     location = alphaUpper.find(c.upper())
     alphaPointer=location + int(offset)
+    if alphaPointer >=26:
+        alphaPointer -=26
     cipherText +=(alphaUpper[alphaPointer])
 
 print("Plain: ", string)
